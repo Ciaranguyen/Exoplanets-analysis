@@ -1,6 +1,6 @@
 This project uses exoplanet data from NASA's Exoplanet Archive to calculate the Earth Similarity Index (ESI), which ranks exoplanets based on how similar they are to Earth in size, temperature, and orbital properties.
 
-By visualizing exoplanet properties with scatter plots and heat maps, the project aims to uncover patterns in habitability indices and explore machine learning models (Random Forests) to predict whether an exoplanet has conditions that could support water - one of the key factors in determining habitability.
+By visualizing exoplanet characteristics with scatter plots and heat maps, the project aims to uncover patterns in the habitability index. Based on ESI scores greater than 8.0 and labeled 1 (with water) and 0 (without water), the project uses machine learning models (Random Forests) to predict whether an exoplanet has conditions that could support water - one of the key factors in determining habitability. Only two exoplanets were predicted to have signs of water.
 
 **Data Set**: NASA Exoplanet Archive (CSV data containing exoplanet parameters)
 
