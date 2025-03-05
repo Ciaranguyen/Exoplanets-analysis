@@ -1,17 +1,20 @@
-This project uses exoplanet data from NASA's Exoplanet Archive to calculate the Earth Similarity Index (ESI), which ranks exoplanets based on how similar they are to Earth in size, temperature, and orbital properties.
+This is a self-taugh research project on predicting exoplanet habitability and water potential using data from the NASA Exoplanet Archive and the Earth Similarity Index (ESI).
 
-By visualizing exoplanet characteristics with scatter plots and heat maps, the project aims to uncover patterns in the habitability index. Based on ESI scores greater than 8.0 and labeled 1 (with water) and 0 (without water), the project uses machine learning models (Random Forests) to predict whether an exoplanet has conditions that could support water - one of the key factors in determining habitability. Only two exoplanets were predicted to have signs of water.
+I trained a machine learning model (Random Forest) to predict exoplanet habitability based on 4 essential features according to the ESI index: temperature, radius, orbital and mass, analyzed the importance of the features, checked for missing scenarios, and used Bayesian Uncertainty Estimation to evaluate prediction confidence.
 
-**Data Set**: NASA Exoplanet Archive (CSV data containing exoplanet parameters)
+**Dataset & Features:**
 
-**Tools**: 
-  - Python: pandas, numpy, matplotlib, seaborn, scikit-learn
-  - Google Colab for analysis and visualization
+The dataset is obtained from the NASA Exoplanet Archive, specifically the Planetary Systems Composite Table.
 
-**Features**:
-  - Compute Earth Similarity Index (ESI) to rank exoplanets
-  - Visualize exoplanet properties using scatter plots & heatmaps
-  - Apply Machine Learning (Random Forest) to predict potential water presence
+**Methodology:**
+
+First, I cleaned the data in the downloaded Exoplanet file and ranked the 10 most habitable planets according to the ESI formula, then used scatterplots and heatmaps to visualize.
+
+Based on the ESI score between 0.6 and 0.8, with labels of 1 (has water) and 0 (no water), I got the result that 2 planets showed signs of life. Usually, planets with ESI index from 0.8 to 1 are considered the most similar to Earth, supporting more life. But because Mars with ESI 0.7 also showed signs of water, I expanded the index to 0.6 and 0.7, but did not get different results.
+
+Follow that, I did an experiment: remove each feature, check the missing features and the importance feature, from which there is conclusion that radius and mass are the two most important features to determine whether a planet has life or not.
+
+I visualize uncertainty in ESI predictions using a Bayesian approach, and realized that unlike a single-point prediction, Bayesian uncertainty gives a range of plausible ESI values, and helps in ranking exoplanets by confidence level, not just by mean ESI.
 
 **References**:
   - NASA Exoplanet Archive: https://exoplanetarchive.ipac.caltech.edu
