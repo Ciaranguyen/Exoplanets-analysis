@@ -10,7 +10,7 @@ The dataset is obtained from the NASA Exoplanet Archive, specifically the Planet
 
 First, I cleaned the data in the downloaded Exoplanet file and ranked the 10 most habitable planets according to the ESI formula, then used scatterplots and heatmaps to visualize.
 
-Based on the ESI score between 0.6 and 0.8, with labels of 1 (has water) and 0 (no water), I got the result that 2 planets showed signs of life. Usually, planets with ESI index from 0.8 to 1 are considered the most similar to Earth, supporting more life. But because Mars with ESI 0.7 also showed signs of water, I expanded the index to 0.6 and 0.7, but did not get different results.
+Based on the ESI score between 0.6 and 0.8, with labels of 1 (has water) and 0 (no water), I got the result that 2 planets showed signs of water. Usually, planets with ESI index from 0.8 to 1 are considered the most similar to Earth, supporting more life. But because Mars with ESI 0.7 also showed signs of water, I expanded the index to 0.6 and 0.7, but did not get different results.
 
 Follow that, I did an experiment: remove each feature, check the missing features and the importance feature, from which there is conclusion that radius and mass are the two most important features to determine if a planet has life, and Random Forest can still make predictions. This shows the flexibility of Random Forest in still predicting despite missing information.
 
